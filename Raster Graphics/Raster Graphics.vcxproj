@@ -127,7 +127,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ColorRGB.cpp" />
+    <ClCompile Include="IImageReader.cpp" />
+    <ClCompile Include="IImageWriter.cpp" />
+    <ClCompile Include="Image.cpp" />
+    <ClCompile Include="PPMImageReader.cpp" />
+    <ClCompile Include="PPMImageWriter.cpp" />
     <ClCompile Include="Raster Graphics.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ColorRGB.h" />
+    <ClInclude Include="IImageReader.h" />
+    <ClInclude Include="IImageWriter.h" />
+    <ClInclude Include="Image.h" />
+    <ClInclude Include="PPMImageReader.h" />
+    <ClInclude Include="PPMImageWriter.h" />
+    <ClInclude Include="Vector.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Vector" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
