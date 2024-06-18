@@ -10,6 +10,8 @@ Image PPMImageReader::readImage(const char* fileName) const
     int imageWidth, imageHeight;
     imageFile >> imageWidth >> imageHeight;
     Image result(imageWidth, imageHeight);
+    int maxColorValue;
+	imageFile >> maxColorValue;
     if(strcmp(fileType, "P3") == 0)
     {
         for(int y = 0; y < imageHeight; y++)
