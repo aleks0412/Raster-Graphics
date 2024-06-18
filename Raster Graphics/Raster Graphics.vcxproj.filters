@@ -36,6 +36,9 @@
     <ClCompile Include="PPMImageWriter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ITransform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ColorRGB.h">
@@ -57,6 +60,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="PPMImageWriter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ITransform.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
