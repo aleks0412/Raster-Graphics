@@ -1,7 +1,7 @@
 ﻿#include <iostream>
 #include "PPMImageReader.h"
 #include "PPMImageWriter.h"
-#include "DesaturateTransform.h"
+#include "BlackAndWhiteTransform.h"
 
 int main()
 {
@@ -20,9 +20,9 @@ int main()
 		//}
 	//}
 	PPMImageWriter writer;
-	DesaturateTransform desaturateTransform;
-	desaturateTransform.transformImage(image);
-	writer.writeImage("testDesaturated.ppm", image);
+	BlackAndWhiteTransform blackAndWhiteTransform;
+	blackAndWhiteTransform.transformImage(image);
+	writer.writeImage("testPosterized.ppm", image);
 
     return 0;
 }

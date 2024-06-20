@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BlackAndWhiteTransform.cpp" />
     <ClCompile Include="ColorRGB.cpp" />
     <ClCompile Include="DesaturateTransform.cpp" />
     <ClCompile Include="IImageReader.cpp" />
@@ -139,6 +140,7 @@
     <ClCompile Include="Rotation.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BlackAndWhiteTransform.h" />
     <ClInclude Include="ColorRGB.h" />
     <ClInclude Include="DesaturateTransform.h" />
     <ClInclude Include="IImageReader.h" />
