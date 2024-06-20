@@ -23,3 +23,13 @@ int Image::getHeight() const
 {
     return this->height;
 }
+
+void Image::setWidth(int width)
+{
+    this->width = width;
+}
+
+void Image::setHeight(int height)
+{
+    this->height = height;
+}

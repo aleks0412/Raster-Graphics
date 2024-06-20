@@ -1,7 +1,9 @@
 ﻿#include <iostream>
 #include "PPMImageReader.h"
 #include "PPMImageWriter.h"
-#include "BlackAndWhiteTransform.h"
+#include "RotationTransform.h"
+#include "ClockwiseRotationTransform.h"
+#include "CounterClockwiseRotationTransform.h"
 
 int main()
 {
@@ -20,9 +22,13 @@ int main()
 		//}
 	//}
 	PPMImageWriter writer;
-	BlackAndWhiteTransform blackAndWhiteTransform;
-	blackAndWhiteTransform.transformImage(image);
-	writer.writeImage("testPosterized.ppm", image);
+	RotationTransform* clockwiseRotationTransform = new ClockwiseRotationTransform();
+	clockwiseRotationTransform->transformImage(image);
+	writer.writeImage("testClockwiseRotation.ppm", image);
+	RotationTransform* counterClockwiseRotationTransform = new CounterClockwiseRotationTransform();
+	counterClockwiseRotationTransform->transformImage(image);
+	counterClockwiseRotationTransform->transformImage(image);
+	writer.writeImage("testCounterClockwiseRotation.ppm", image);
 
     return 0;
 }

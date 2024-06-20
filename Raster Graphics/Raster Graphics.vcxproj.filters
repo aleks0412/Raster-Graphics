@@ -39,13 +39,19 @@
     <ClCompile Include="ITransform.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Rotation.cpp">
+    <ClCompile Include="RotationTransform.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="DesaturateTransform.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="BlackAndWhiteTransform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ClockwiseRotationTransform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CounterClockwiseRotationTransform.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -74,7 +80,7 @@
     <ClInclude Include="ITransform.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Rotation.h">
+    <ClInclude Include="RotationTransform.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="utils.hpp">
@@ -84,6 +90,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="BlackAndWhiteTransform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ClockwiseRotationTransform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CounterClockwiseRotationTransform.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
