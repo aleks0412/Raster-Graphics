@@ -11,7 +11,7 @@ void PPMImageWriter::writeImage(const char* fileName, const Image& image) const
 	{
 		for (int x = 0; x < image.getWidth(); x++)
 		{
-			imageFile << image.getPixel(x, y).red << "\n" << image.getPixel(x, y).green << "\n" << image.getPixel(x, y).blue << "\n";
+			imageFile << image.getPixel(x, y).getRed() << "\n" << image.getPixel(x, y).getGreen() << "\n" << image.getPixel(x, y).getBlue() << "\n";
 		}
 	}
 }

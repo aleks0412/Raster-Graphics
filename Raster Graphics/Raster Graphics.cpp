@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #include "PPMImageReader.h"
 #include "PPMImageWriter.h"
+#include "DesaturateTransform.h"
 
 int main()
 {
@@ -9,17 +10,19 @@ int main()
     std::cout << image.getWidth() << " " << image.getHeight() << std::endl;
 	int imageWidth = image.getWidth();
 	int imageHeight = image.getHeight();
-	for (int y = 0; y < imageHeight; y++)
-	{
-		for (int x = 0; x < imageWidth; x++)
-		{
-			ColorRGB currentColor = image.getPixel(x, y);
-			currentColor.blue = 0;
-			image.setPixel(x, y, currentColor);
-		}
-	}
+	//for (int y = 0; y < imageHeight; y++)
+	//{
+		//for (int x = 0; x < imageWidth; x++)
+		//{
+			//ColorRGB currentColor = image.getPixel(x, y);
+			//currentColor.desaturate();
+			//image.setPixel(x, y, currentColor);
+		//}
+	//}
 	PPMImageWriter writer;
-	writer.writeImage("testWithoutBlue.ppm", image);
+	DesaturateTransform desaturateTransform;
+	desaturateTransform.transformImage(image);
+	writer.writeImage("testDesaturated.ppm", image);
 
     return 0;
 }
