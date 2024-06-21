@@ -18,6 +18,7 @@ public:
 
     const Image& getImage() const;
     Image& getImage();
+
 private:
     Image image;
     Vector<SubclassPtr<ITransform>> transforms;
