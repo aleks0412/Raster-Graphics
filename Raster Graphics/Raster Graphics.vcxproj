@@ -140,6 +140,7 @@
     <ClCompile Include="PPMImageWriter.cpp" />
     <ClCompile Include="Raster Graphics.cpp" />
     <ClCompile Include="RotationTransform.cpp" />
+    <ClCompile Include="TransformedImage.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BlackAndWhiteTransform.h" />
@@ -154,6 +155,8 @@
     <ClInclude Include="PPMImageReader.h" />
     <ClInclude Include="PPMImageWriter.h" />
     <ClInclude Include="RotationTransform.h" />
+    <ClInclude Include="SubclassPtr.hpp" />
+    <ClInclude Include="TransformedImage.h" />
     <ClInclude Include="utils.hpp" />
     <ClInclude Include="Vector.hpp" />
   </ItemGroup>
