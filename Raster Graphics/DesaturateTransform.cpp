@@ -14,3 +14,8 @@ void DesaturateTransform::transformImage(Image& image) const
         }
     }
 }
+
+ITransform* DesaturateTransform::clone() const
+{
+    return new DesaturateTransform();
+}

@@ -25,3 +25,8 @@ void BlackAndWhiteTransform::transformImage(Image& image) const
         }
     }
 }
+
+ITransform* BlackAndWhiteTransform::clone() const
+{
+    return new BlackAndWhiteTransform();
+}
