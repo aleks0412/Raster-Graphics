@@ -44,3 +44,10 @@ void ColorRGB::desaturate()
 {
     this->red = this->green = this->blue = getValue();
 }
+
+void ColorRGB::invert()
+{
+    this->red = 255 - this->red;
+    this->green = 255 - this->green;
+    this->blue = 255 - this->blue;
+}

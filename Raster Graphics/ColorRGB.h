@@ -16,6 +16,7 @@ public:
 	void setBlue(int blue);
 
 	void desaturate();
+	void invert();
 
 private:
 	int red = 0;
