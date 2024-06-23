@@ -27,7 +27,7 @@ int main()
 		{
 			isAppRunning = false;
 		}
-		else if (command == "load")
+		else if (command == "add")
 		{
 			String imagePath;
 			std::cin >> imagePath;
