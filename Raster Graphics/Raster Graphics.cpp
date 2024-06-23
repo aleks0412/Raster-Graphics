@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #include "IImageReader.h"
 #include "PPMImageReader.h"
+#include "PBMImageReader.h"
 #include "PPMImageWriter.h"
 #include "NegativeTransform.h"
 #include "DesaturateTransform.h"
@@ -16,7 +17,7 @@ int main()
 	bool isAppRunning = true;
 	Vector<Session> sessions;
 	int currentSession = 0;
-	SubclassPtr<IImageReader> reader = SubclassPtr<IImageReader>(new PPMImageReader());
+	SubclassPtr<IImageReader> reader = SubclassPtr<IImageReader>(new PBMImageReader());
 	while (isAppRunning)
 	{
 		String command;

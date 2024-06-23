@@ -139,6 +139,8 @@
     <ClCompile Include="ImageTypeFactory.cpp" />
     <ClCompile Include="ITransform.cpp" />
     <ClCompile Include="NegativeTransform.cpp" />
+    <ClCompile Include="PBMImageReader.cpp" />
+    <ClCompile Include="PGMImageReader.cpp" />
     <ClCompile Include="PPMImageReader.cpp" />
     <ClCompile Include="PPMImageWriter.cpp" />
     <ClCompile Include="Raster Graphics.cpp" />
@@ -161,6 +163,8 @@
     <ClInclude Include="ImageTypeFactory.h" />
     <ClInclude Include="ITransform.h" />
     <ClInclude Include="NegativeTransform.h" />
+    <ClInclude Include="PBMImageReader.h" />
+    <ClInclude Include="PGMImageReader.h" />
     <ClInclude Include="PPMImageReader.h" />
     <ClInclude Include="PPMImageWriter.h" />
     <ClInclude Include="RotationTransform.h" />

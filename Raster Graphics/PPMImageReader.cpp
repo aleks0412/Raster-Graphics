@@ -6,9 +6,8 @@
 Image PPMImageReader::readImage(const String& fileName) const
 {
     std::ifstream imageFile(fileName.c_str());
-    char fileType[3];
+    String fileType;
     imageFile >> fileType;
-    std::cout << "File type: " << fileType << std::endl;
     ImageType imageType = ImageTypeFactory::getImageType(fileType);
     int imageWidth, imageHeight;
     imageFile >> imageWidth >> imageHeight;

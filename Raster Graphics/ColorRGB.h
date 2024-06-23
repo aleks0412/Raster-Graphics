@@ -18,6 +18,8 @@ public:
 	void desaturate();
 	void invert();
 
+	static constexpr int MAX_RGB_VALUE = 255;
+
 private:
 	int red = 0;
 	int green = 0;
