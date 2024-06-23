@@ -24,6 +24,16 @@ int Image::getHeight() const
     return this->height;
 }
 
+ImageType Image::getImageType() const
+{
+    return this->imageType;
+}
+
+String Image::getFileName() const
+{
+    return this->fileName;
+}
+
 void Image::setWidth(int width)
 {
     this->width = width;
@@ -32,4 +42,14 @@ void Image::setWidth(int width)
 void Image::setHeight(int height)
 {
     this->height = height;
+}
+
+void Image::setImageType(ImageType imageType)
+{
+    this->imageType = imageType;
+}
+
+void Image::setFileName(const String& fileName)
+{
+    this->fileName = fileName;
 }
