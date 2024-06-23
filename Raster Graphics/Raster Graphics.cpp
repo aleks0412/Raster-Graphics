@@ -9,6 +9,7 @@
 #include "Session.h"
 #include "Vector.hpp"
 #include "String.h"
+#include "TransformFactory.h"
 
 int main()
 {
@@ -39,20 +40,9 @@ int main()
 			std::cin >> imagePath;
 			sessions[0].addImage(reader->readImage(imagePath.c_str()));
 		}
-		else if (command == "grayscale")
+		else if (TransformFactory::isTransformName(command))
 		{
-			SubclassPtr<ITransform> desaturateTransform(new DesaturateTransform());
-			sessions[0].addTransform(std::move(desaturateTransform));
-		}
-		else if (command == "negative")
-		{
-			SubclassPtr<ITransform> negativeTransform(new NegativeTransform());
-			sessions[0].addTransform(std::move(negativeTransform));
-		}
-		else if (command == "clockwise")
-		{
-			SubclassPtr<ITransform> clockwiseRotationTransform(new ClockwiseRotationTransform());
-			sessions[0].addTransform(std::move(clockwiseRotationTransform));
+			sessions[currentSession - 1].addTransform(TransformFactory::createTransform(command));
 		}
 		else if (command == "undo")
 		{

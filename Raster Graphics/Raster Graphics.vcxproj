@@ -144,6 +144,7 @@
     <ClCompile Include="Session.cpp" />
     <ClCompile Include="String.cpp" />
     <ClCompile Include="TransformedImage.cpp" />
+    <ClCompile Include="TransformFactory.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BlackAndWhiteTransform.h" />
@@ -163,6 +164,7 @@
     <ClInclude Include="String.h" />
     <ClInclude Include="SubclassPtr.hpp" />
     <ClInclude Include="TransformedImage.h" />
+    <ClInclude Include="TransformFactory.h" />
     <ClInclude Include="utils.hpp" />
     <ClInclude Include="Vector.hpp" />
   </ItemGroup>
