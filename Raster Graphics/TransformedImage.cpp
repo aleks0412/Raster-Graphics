@@ -31,7 +31,8 @@ void TransformedImage::popTransform()
 
 void TransformedImage::transformImage()
 {
-	for(int i = 0; i < this->transforms.getSize(); i++)
+	size_t transformsSize = this->transforms.getSize();
+	for(int i = 0; i < transformsSize; i++)
 		this->transforms[i]->transformImage(image);
 }
 

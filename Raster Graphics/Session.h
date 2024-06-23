@@ -17,6 +17,8 @@ public:
     void popTransform();
     void transformImages();
 
+    size_t getImagesSize() const;
+
 private:
     Vector<TransformedImage> images;
 };

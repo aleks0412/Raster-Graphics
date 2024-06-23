@@ -22,24 +22,33 @@ Image& Session::getImage(size_t index)
 
 void Session::addTransform(const SubclassPtr<ITransform>& transform)
 {
-	for(size_t i = 0; i < this->images.getSize(); i++)
+	size_t imagesSize = this->images.getSize();
+	for(size_t i = 0; i < imagesSize; i++)
 		this->images[i].addTransform(transform);
 }
 
 void Session::addTransform(SubclassPtr<ITransform>&& transform)
 {
-	for(size_t i = 0; i < this->images.getSize(); i++)
+	size_t imagesSize = this->images.getSize();
+	for(size_t i = 0; i < imagesSize; i++)
 		this->images[i].addTransform(std::move(transform));
 }
 
 void Session::popTransform()
 {
-	for(size_t i = 0; i < this->images.getSize(); i++)
+	size_t imagesSize = this->images.getSize();
+	for(size_t i = 0; i < imagesSize; i++)
 		this->images[i].popTransform();
 }
 
 void Session::transformImages()
 {
-	for(size_t i = 0; i < this->images.getSize(); i++)
+	size_t imagesSize = this->images.getSize();
+	for(size_t i = 0; i < imagesSize; i++)
 		this->images[i].transformImage();
+}
+
+size_t Session::getImagesSize() const
+{
+	return this->images.getSize();
 }

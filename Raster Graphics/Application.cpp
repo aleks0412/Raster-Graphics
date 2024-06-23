@@ -4,8 +4,8 @@
 #include "Session.h"
 #include "IImageReader.h"
 #include "IImageWriter.h"
-#include "PPMImageWriter.h"
 #include "ImageReaderFactory.h"
+#include "ImageWriteFactory.h"
 #include "TransformFactory.h"
 #include <iostream>
 void Application::run()
@@ -31,22 +31,30 @@ void Application::run()
 			String imagePath;
 			std::cin >> imagePath;
 			SubclassPtr<IImageReader> reader = ImageReaderFactory::CreateImageReader(imagePath);
-			sessions[0].addImage(reader->readImage(imagePath.c_str()));
+			sessions[currentSession - 1].addImage(reader->readImage(imagePath.c_str()));
 		}
 		else if (TransformFactory::isTransformName(command))
 		{
-			sessions[currentSession - 1].addTransform(TransformFactory::createTransform(command));
+			SubclassPtr<ITransform> transform = TransformFactory::createTransform(command);
+			sessions[currentSession - 1].addTransform(transform);
 		}
-		else if (command == "undo")
+		else if (command == UNDO_COMMAND)
 		{
-			sessions[0].popTransform();
+			sessions[currentSession - 1].popTransform();
 		}
 		else if (command == EXIT_COMMAND)
 		{
 			isRunning = false;
 		}
+		else if (command == SAVE_COMMAND)
+		{
+			sessions[currentSession - 1].transformImages();
+			size_t sessionImagesSize = sessions[currentSession - 1].getImagesSize();
+			for (size_t i = 0; i < sessionImagesSize; i++)
+			{
+				SubclassPtr<IImageWriter> writer = ImageWriterFactory::CreateImageWriter(sessions[currentSession - 1].getImage(i));
+				writer->writeImage(sessions[currentSession - 1].getImage(i).getFileName(), sessions[currentSession - 1].getImage(i));
+			}
+		}
 	}
-	PPMImageWriter writer;
-	sessions[0].transformImages();
-	writer.writeImage("testResult.ppm", sessions[0].getImage(0));
 }

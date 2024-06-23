@@ -137,7 +137,6 @@
     <ClCompile Include="IImageWriter.cpp" />
     <ClCompile Include="Image.cpp" />
     <ClCompile Include="ImageReaderFactory.cpp" />
-    <ClCompile Include="ImageType.cpp" />
     <ClCompile Include="ImageTypeFactory.cpp" />
     <ClCompile Include="ImageWriteFactory.cpp" />
     <ClCompile Include="ITransform.cpp" />
