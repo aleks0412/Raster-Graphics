@@ -1,5 +1,5 @@
 #include "PGMImageWriter.h"
 
-void PGMImageWriter::writeImage(const char* fileName, const Image& image) const
+void PGMImageWriter::writeImage(const String& fileName, const Image& image) const
 {
 }
