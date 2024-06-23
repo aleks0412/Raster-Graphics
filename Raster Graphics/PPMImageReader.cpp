@@ -12,7 +12,7 @@ Image PPMImageReader::readImage(const String& fileName) const
     ImageType imageType = ImageTypeFactory::getImageType(fileType);
     int imageWidth, imageHeight;
     imageFile >> imageWidth >> imageHeight;
-    Image result(imageWidth, imageHeight);
+    Image result(imageWidth, imageHeight, imageType, fileName);
     int maxColorValue;
 	imageFile >> maxColorValue;
     switch(imageType)

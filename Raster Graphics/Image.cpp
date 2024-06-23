@@ -1,6 +1,6 @@
 #include "Image.h"
 
-Image::Image(int width, int height) : width(width), height(height), pixels(width * height)
+Image::Image(int width, int height, ImageType imageType, const String& fileName) : width(width), height(height), imageType(imageType), fileName(fileName), pixels(width * height)
 {
 }
 

@@ -8,7 +8,7 @@ class Image
 {
 public:
 	Image() = default;
-	Image(int width, int height);
+	Image(int width, int height, ImageType imageType, const String& fileName);
 
 	ColorRGB getPixel(int x, int y) const;
 	void setPixel(int x, int y, ColorRGB color);
