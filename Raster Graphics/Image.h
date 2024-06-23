@@ -27,6 +27,6 @@ private:
 	Vector<ColorRGB> pixels;
 	int width = 0;
 	int height = 0;
-	ImageType imageType;
+	ImageType imageType = ImageType::PPM_ASCII;
 	String fileName;
 };

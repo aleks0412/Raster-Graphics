@@ -22,7 +22,7 @@ int ColorRGB::getBlue() const
 
 int ColorRGB::getValue() const
 {
-    return utils::max(utils::max(this->red, this->green), this->blue);
+    return utils::max<int>(utils::max(this->red, this->green), this->blue);
 }
 
 void ColorRGB::setRed(int red)
