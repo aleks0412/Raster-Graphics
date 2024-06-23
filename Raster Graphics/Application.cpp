@@ -28,6 +28,10 @@ void Application::run()
 			sessions[currentSession++].addImage(reader->readImage(imagePath));
 			std::cout << "Session with ID: " << currentSession << " started" << std::endl;
 		}
+		else if (currentSession == 0)
+		{
+			throw std::invalid_argument("No session started");
+		}
 		else if (command == ADD_COMMAND)
 		{
 			String imagePath;
