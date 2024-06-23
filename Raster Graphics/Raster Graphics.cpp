@@ -14,16 +14,22 @@ int main()
 {
 	bool isAppRunning = true;
 	Vector<Session> sessions;
-	Session session;
-	sessions.pushBack(std::move(session));
+	int currentSession = 0;
 	SubclassPtr<IImageReader> reader = SubclassPtr<IImageReader>(new PPMImageReader());
-	Image image = reader->readImage("test.ppm");
-	sessions[0].addImage(std::move(image));
 	while (isAppRunning)
 	{
 		String command;
 		std::cin >> command;
-		if (command == "exit")
+		if (command == "load")
+		{
+			Session session;
+			sessions.pushBack(std::move(session));
+			String imagePath;
+			std::cin >> imagePath;
+			sessions[currentSession++].addImage(reader->readImage(imagePath.c_str()));
+			std::cout << "Session with ID: " << currentSession << " started" << std::endl;
+		}
+		else if (command == "exit")
 		{
 			isAppRunning = false;
 		}
