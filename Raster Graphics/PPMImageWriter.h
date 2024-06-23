@@ -4,5 +4,5 @@
 class PPMImageWriter : public IImageWriter
 {
 public:
-	void writeImage(const char* fileName, const Image& image) const override;
+	void writeImage(const String& fileName, const Image& image) const override;
 };

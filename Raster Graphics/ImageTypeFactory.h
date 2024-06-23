@@ -7,7 +7,6 @@ class ImageTypeFactory
 public:
     static ImageType getImageType(const String& imageTypeStr);
 
-private:
     static const String PPM_ASCII;
     static const String PPM_BINARY;
     static const String PGM_ASCII;
