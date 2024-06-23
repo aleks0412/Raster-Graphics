@@ -56,5 +56,13 @@ void Application::run()
 				writer->writeImage(sessions[currentSession - 1].getImage(i).getFileName(), sessions[currentSession - 1].getImage(i));
 			}
 		}
+		else if (command == SAVEAS_COMMAND)
+		{
+			String imagePath;
+			std::cin >> imagePath;
+			sessions[currentSession - 1].transformImages();
+			SubclassPtr<IImageWriter> writer = ImageWriterFactory::CreateImageWriter(sessions[currentSession - 1].getImage(0));
+			writer->writeImage(imagePath, sessions[currentSession - 1].getImage(0));
+		}
 	}
 }
