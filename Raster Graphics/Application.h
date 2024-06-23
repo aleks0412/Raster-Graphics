@@ -19,5 +19,8 @@ private:
 	const String SAVE_COMMAND = "save";
 	const String SAVEAS_COMMAND = "save_as";
 	const String UNDO_COMMAND = "undo";
+	const String HELP_COMMAND = "help";
 	const String EXIT_COMMAND = "exit";
+
+	const String HELP_MESSAGE = "load <filename> - load image\nadd <filename> - add image\nsave - save current image\nsave_as <filename> - save image as\nundo - undo last action\nexit - exit application\nswitch <session_id> - switch to another session\nsession_info - get info about current session\ntransforms: grayscale, monochrome, negative, rotate <direction>\ncollage <direction> <image1> <image2> <output> - collage images\n";
 };

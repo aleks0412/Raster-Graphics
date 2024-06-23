@@ -13,6 +13,7 @@ void Application::run()
 {
 	Vector<Session> sessions;
 	int currentSession = 0;
+	std::cout << "Write help to get list of commands" << std::endl;
 	while (isRunning)
 	{
 		String command;
@@ -79,6 +80,10 @@ void Application::run()
 			sessions[currentSession - 1].transformImages();
 			SubclassPtr<IImageWriter> writer = ImageWriterFactory::CreateImageWriter(sessions[currentSession - 1].getImage(0));
 			writer->writeImage(imagePath, sessions[currentSession - 1].getImage(0));
+		}
+		else if (command == HELP_COMMAND)
+		{
+			std::cout << HELP_MESSAGE << std::endl;
 		}
 		else if (command == COLLAGE_COMMAND)
 		{
