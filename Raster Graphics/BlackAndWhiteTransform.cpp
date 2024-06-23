@@ -9,11 +9,11 @@ void BlackAndWhiteTransform::transformImage(Image& image) const
         for (int x = 0; x < imageWidth; x++)
         {
             ColorRGB currentColor = image.getPixel(x, y);
-            if(currentColor.getValue() > 255 / 2)
+            if(currentColor.getValue() > ColorRGB::MAX_RGB_VALUE / 2)
             {
-                currentColor.setRed(255);
-                currentColor.setGreen(255);
-                currentColor.setBlue(255);
+                currentColor.setRed(ColorRGB::MAX_RGB_VALUE);
+                currentColor.setGreen(ColorRGB::MAX_RGB_VALUE);
+                currentColor.setBlue(ColorRGB::MAX_RGB_VALUE);
             }
             else
             {
