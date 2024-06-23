@@ -20,7 +20,13 @@ void TransformedImage::addTransform(SubclassPtr<ITransform>&& transform)
 
 void TransformedImage::popTransform()
 {
-	this->transforms.popBack();
+	try
+	{
+		this->transforms.popBack();
+	}
+	catch (const std::length_error& e)
+	{
+	}
 }
 
 void TransformedImage::transformImage()
