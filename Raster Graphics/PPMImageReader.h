@@ -4,5 +4,5 @@
 class PPMImageReader : public IImageReader
 {
 public:
-    Image readImage(const char* fileName) const override;
+    Image readImage(const String& fileName) const override;
 };

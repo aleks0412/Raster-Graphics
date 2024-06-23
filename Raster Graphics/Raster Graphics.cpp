@@ -27,12 +27,8 @@ int main()
 			sessions.pushBack(std::move(session));
 			String imagePath;
 			std::cin >> imagePath;
-			sessions[currentSession++].addImage(reader->readImage(imagePath.c_str()));
+			sessions[currentSession++].addImage(reader->readImage(imagePath));
 			std::cout << "Session with ID: " << currentSession << " started" << std::endl;
-		}
-		else if (command == "exit")
-		{
-			isAppRunning = false;
 		}
 		else if (command == "add")
 		{
@@ -47,6 +43,10 @@ int main()
 		else if (command == "undo")
 		{
 			sessions[0].popTransform();
+		}
+		else if (command == "exit")
+		{
+			isAppRunning = false;
 		}
 	}
 	PPMImageWriter writer;

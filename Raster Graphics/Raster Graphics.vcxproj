@@ -135,6 +135,8 @@
     <ClCompile Include="IImageReader.cpp" />
     <ClCompile Include="IImageWriter.cpp" />
     <ClCompile Include="Image.cpp" />
+    <ClCompile Include="ImageType.cpp" />
+    <ClCompile Include="ImageTypeFactory.cpp" />
     <ClCompile Include="ITransform.cpp" />
     <ClCompile Include="NegativeTransform.cpp" />
     <ClCompile Include="PPMImageReader.cpp" />
@@ -155,6 +157,8 @@
     <ClInclude Include="IImageReader.h" />
     <ClInclude Include="IImageWriter.h" />
     <ClInclude Include="Image.h" />
+    <ClInclude Include="ImageType.h" />
+    <ClInclude Include="ImageTypeFactory.h" />
     <ClInclude Include="ITransform.h" />
     <ClInclude Include="NegativeTransform.h" />
     <ClInclude Include="PPMImageReader.h" />

@@ -1,5 +1,7 @@
 #pragma once
 #include "ColorRGB.h"
+#include "ImageType.h"
+#include "String.h"
 #include "Vector.hpp"
 
 class Image
@@ -20,4 +22,6 @@ private:
 	Vector<ColorRGB> pixels;
 	int width = 0;
 	int height = 0;
+	String fileName;
+	ImageType imageType;
 };

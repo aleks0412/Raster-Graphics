@@ -1,8 +1,9 @@
 #pragma once
 #include "Image.h"
+#include "String.h"
 
 class IImageReader
 {
 public:
-    virtual Image readImage(const char* fileName) const = 0;
+    virtual Image readImage(const String& fileName) const = 0;
 };
