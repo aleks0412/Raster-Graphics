@@ -28,6 +28,10 @@ void Application::run()
 			sessions[currentSession++].addImage(reader->readImage(imagePath));
 			std::cout << "Session with ID: " << currentSession << " started" << std::endl;
 		}
+		else if (command == HELP_COMMAND)
+		{
+			std::cout << HELP_MESSAGE << std::endl;
+		}
 		else if (currentSession == 0)
 		{
 			throw std::invalid_argument("No session started");
@@ -84,10 +88,6 @@ void Application::run()
 			sessions[currentSession - 1].transformImages();
 			SubclassPtr<IImageWriter> writer = ImageWriterFactory::CreateImageWriter(sessions[currentSession - 1].getImage(0));
 			writer->writeImage(imagePath, sessions[currentSession - 1].getImage(0));
-		}
-		else if (command == HELP_COMMAND)
-		{
-			std::cout << HELP_MESSAGE << std::endl;
 		}
 		else if (command == COLLAGE_COMMAND)
 		{

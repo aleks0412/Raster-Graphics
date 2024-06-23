@@ -22,5 +22,5 @@ private:
 	const String HELP_COMMAND = "help";
 	const String EXIT_COMMAND = "exit";
 
-	const String HELP_MESSAGE = "load <filename> - load image\nadd <filename> - add image\nsave - save current image\nsave_as <filename> - save image as\nundo - undo last action\nexit - exit application\nswitch <session_id> - switch to another session\nsession_info - get info about current session\ntransforms: grayscale, monochrome, negative, rotate <direction>\ncollage <direction> <image1> <image2> <output> - collage images\n";
+	const String HELP_MESSAGE = "load <filename> - load image\nadd <filename> - add image\nsave - save all images\nsave_as <filename> - save first image as\nundo - undo last transform\nexit - exit the application\nswitch <session_id> - switch to another session\nsession_info - get info about the current session\ntransforms: grayscale, monochrome, negative, rotate <direction>\ncollage <direction> <image1> <image2> <output> - collage images\n";
 };
