@@ -38,6 +38,21 @@ void Application::run()
 			SubclassPtr<ITransform> transform = TransformFactory::createTransform(command);
 			sessions[currentSession - 1].addTransform(transform);
 		}
+		else if (command == SESSION_INFO_COMMAND)
+		{
+			std::cout << "Session ID: " << currentSession << std::endl;
+			size_t sessionImagesSize = sessions[currentSession - 1].getImagesSize();
+			for (size_t i = 0; i < sessionImagesSize; i++)
+			{
+				std::cout << sessions[currentSession - 1].getImage(i).getFileName() << std::endl;
+			}
+		}
+		else if (command == SWITCH_COMMAND)
+		{
+			int sessionID;
+			std::cin >> sessionID;
+			currentSession = sessionID;
+		}
 		else if (command == UNDO_COMMAND)
 		{
 			sessions[currentSession - 1].popTransform();
